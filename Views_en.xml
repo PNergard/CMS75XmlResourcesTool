@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<languages>
+  <language name="English" id="en">
+    <xmlresourcemanager>
+      <heading>Xml Resource Manager</heading>
+      <description>A plugin for creating and maintaining XML language files</description>
+      <columnname>Name</columnname>
+      <blockcolumnname>Name</blockcolumnname>
+      <columncaption>Caption</columncaption>
+      <columnhelptext>Help text</columnhelptext>
+      <columndisplayname>Display name</columndisplayname>
+      <columndblockisplayname>Display name</columndblockisplayname>
+      <columndescription>Description</columndescription>
+      <columnview>View</columnview>
+      <columnviewelement>Element</columnviewelement>
+      <columnviewelementvalue>Value</columnviewelementvalue>
+      <columnblocktype>Block name</columnblocktype>
+      <tabpagetypes>Page types</tabpagetypes>
+      <tabproperties>Page type - properties</tabproperties>
+      <tabtabs>Tabs</tabtabs>
+      <tabblocks>Blocks</tabblocks>
+      <tabblockproperties>Block - properties</tabblockproperties>
+      <tabviews>Views</tabviews>
+      <tabcategories>Categories</tabcategories>
+      <buttoncreate>Save</buttoncreate>
+      <buttoncancel>Cancel</buttoncancel>
+      <buttonrefresh>Refresh</buttonrefresh>
+    </xmlresourcemanager>
+  </language>
+</languages>
