@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Nergard.EPi.Plugins {
+namespace Nergard.EPi.Plugins.XmlResourceManager.Plugins {
     
     
     public partial class XmlResourceManager {
@@ -166,6 +166,15 @@ namespace Nergard.EPi.Plugins {
         protected global::EPiServer.UI.WebControls.ToolButton Cancel;
         
         /// <summary>
+        /// ScriptReloadPageEvent1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::EPiServer.ClientScript.WebControls.ScriptReloadPageEvent ScriptReloadPageEvent1;
+        
+        /// <summary>
         /// Properties control.
         /// </summary>
         /// <remarks>
@@ -200,6 +209,15 @@ namespace Nergard.EPi.Plugins {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::EPiServer.UI.WebControls.ToolButton ToolButton2;
+        
+        /// <summary>
+        /// ScriptReloadPageEvent2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::EPiServer.ClientScript.WebControls.ScriptReloadPageEvent ScriptReloadPageEvent2;
         
         /// <summary>
         /// Blocks control.
@@ -238,6 +256,15 @@ namespace Nergard.EPi.Plugins {
         protected global::EPiServer.UI.WebControls.ToolButton ToolButton6;
         
         /// <summary>
+        /// ScriptReloadPageEvent4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::EPiServer.ClientScript.WebControls.ScriptReloadPageEvent ScriptReloadPageEvent4;
+        
+        /// <summary>
         /// blockpropertiespertype control.
         /// </summary>
         /// <remarks>
@@ -272,6 +299,15 @@ namespace Nergard.EPi.Plugins {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::EPiServer.UI.WebControls.ToolButton ToolButton13;
+        
+        /// <summary>
+        /// ScriptReloadPageEvent7 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::EPiServer.ClientScript.WebControls.ScriptReloadPageEvent ScriptReloadPageEvent7;
         
         /// <summary>
         /// Views control.
@@ -310,6 +346,15 @@ namespace Nergard.EPi.Plugins {
         protected global::EPiServer.UI.WebControls.ToolButton ToolButton10;
         
         /// <summary>
+        /// ScriptReloadPageEvent6 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::EPiServer.ClientScript.WebControls.ScriptReloadPageEvent ScriptReloadPageEvent6;
+        
+        /// <summary>
         /// Categories control.
         /// </summary>
         /// <remarks>
@@ -344,6 +389,15 @@ namespace Nergard.EPi.Plugins {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::EPiServer.UI.WebControls.ToolButton ToolButton8;
+        
+        /// <summary>
+        /// ScriptReloadPageEvent5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::EPiServer.ClientScript.WebControls.ScriptReloadPageEvent ScriptReloadPageEvent5;
         
         /// <summary>
         /// Groups control.
@@ -382,6 +436,15 @@ namespace Nergard.EPi.Plugins {
         protected global::EPiServer.UI.WebControls.ToolButton ToolButton4;
         
         /// <summary>
+        /// ScriptReloadPageEvent3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::EPiServer.ClientScript.WebControls.ScriptReloadPageEvent ScriptReloadPageEvent3;
+        
+        /// <summary>
         /// DisplayChannels control.
         /// </summary>
         /// <remarks>
@@ -418,6 +481,15 @@ namespace Nergard.EPi.Plugins {
         protected global::EPiServer.UI.WebControls.ToolButton ToolButton15;
         
         /// <summary>
+        /// ScriptReloadPageEvent8 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::EPiServer.ClientScript.WebControls.ScriptReloadPageEvent ScriptReloadPageEvent8;
+        
+        /// <summary>
         /// DisplayResolutions control.
         /// </summary>
         /// <remarks>
@@ -452,5 +524,14 @@ namespace Nergard.EPi.Plugins {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::EPiServer.UI.WebControls.ToolButton ToolButton17;
+        
+        /// <summary>
+        /// ScriptReloadPageEvent9 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::EPiServer.ClientScript.WebControls.ScriptReloadPageEvent ScriptReloadPageEvent9;
     }
 }
