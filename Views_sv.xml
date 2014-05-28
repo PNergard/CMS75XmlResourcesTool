@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <languages>
-  <language name="svenska" id="en">
+  <language name="svenska" id="sv">
     <xmlresourcemanager>
       <heading>Xml Resource Managersv</heading>
       <description>A plugin for creating and maintaining XML language files</description>
@@ -15,10 +15,10 @@
       <columnblocktype>Block</columnblocktype>
       <tabpagetypes>Pagetypes</tabpagetypes>
       <tabproperties>Pagetype-properties</tabproperties>
-      <tabpropertiesunique>Pagetype-properties</tabpropertiesunique>
+      <tabproperties>Pagetype-properties-unique</tabproperties>
       <tabtabs>Tabs</tabtabs>
       <tabblocks>Blocks</tabblocks>
-      <tabblockpropertiesperproperty>Blocks-properties</tabblockpropertiesperproperty>
+      <tabblockproperties>Blocks-properties</tabblockproperties>
       <tabviews>Views</tabviews>
       <tabdisplaychannels>Channels</tabdisplaychannels>
       <tabdisplayresolution>Display Resolutions</tabdisplayresolution>
