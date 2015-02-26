@@ -1,31 +1,31 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <languages>
-  <language name="svenska" id="en">
+  <language name="English" id="en">
     <xmlresourcemanager>
-      <heading>Xml Resource Managersv</heading>
+      <heading>Xml Resource Manager</heading>
       <description>A plugin for creating and maintaining XML language files</description>
       <columnname>Name</columnname>
+      <blockcolumnname>Name</blockcolumnname>
       <columncaption>Caption</columncaption>
       <columnhelptext>Help text</columnhelptext>
-      <columndisplayname>Display Name</columndisplayname>
+      <columndisplayname>Display name</columndisplayname>
+      <columndblockisplayname>Display name</columndblockisplayname>
       <columndescription>Description</columndescription>
       <columnview>View</columnview>
       <columnviewelement>Element</columnviewelement>
       <columnviewelementvalue>Value</columnviewelementvalue>
-      <columnblocktype>Block</columnblocktype>
-      <tabpagetypes>Pagetypes</tabpagetypes>
-      <tabproperties>Pagetype-properties</tabproperties>
-      <tabpropertiesunique>Pagetype-properties</tabpropertiesunique>
+      <columnblocktype>Block name</columnblocktype>
+      <tabpagetypes>Page types</tabpagetypes>
+      <tabproperties>Page type - properties</tabproperties>
       <tabtabs>Tabs</tabtabs>
       <tabblocks>Blocks</tabblocks>
-      <tabblockpropertiesperproperty>Blocks-properties</tabblockpropertiesperproperty>
+      <tabblockproperties>Block - properties</tabblockproperties>
       <tabviews>Views</tabviews>
-      <tabdisplaychannels>Channels</tabdisplaychannels>
-      <tabdisplayresolution>Display Resolutions</tabdisplayresolution>
       <tabcategories>Categories</tabcategories>
       <buttoncreate>Save</buttoncreate>
       <buttoncancel>Cancel</buttoncancel>
-      <buttonrefresh>Uppdatera</buttonrefresh>
+      <buttonrefresh>Refresh</buttonrefresh>
+      <buttonsavepath>Save path</buttonsavepath>
     </xmlresourcemanager>
   </language>
 </languages>

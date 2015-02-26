@@ -5,6 +5,7 @@ using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Threading;
+using System.Web;
 using System.Web.Configuration;
 using System.Web.UI.WebControls;
 using System.Xml;
@@ -16,6 +17,7 @@ using EPiServer.ServiceLocation;
 using EPiServer.Shell.WebForms;
 using EPiServer.UI.WebControls;
 using EPiServer.Web;
+using Nergard.EPi.Plugins.XmlResourceManager.DDS;
 
 namespace Nergard.EPi.Plugins.XmlResourceManager.Plugins
 {
@@ -32,8 +34,8 @@ namespace Nergard.EPi.Plugins.XmlResourceManager.Plugins
         private string _helpText = "";
         private string _propName = "";
         private string _typeName = "";
-        private string viewsxmlfilename = "/Resources/LanguageFiles/Views{0}.xml";
-        private string xmlfilename = "/Resources/LanguageFiles/{0}_{1}.xml";
+        private string viewsxmlfilename = "";
+        private string xmlfilename = "";
 
         #endregion
 
@@ -74,7 +76,18 @@ namespace Nergard.EPi.Plugins.XmlResourceManager.Plugins
         {
             base.OnLoad(e);
 
-            var path = WebConfigurationManager.AppSettings.Get("resourcemanagerpath");
+            if (!IsPostBack)
+            {
+                var store = DynamicDataStoreFactory.Instance.GetStore(typeof(XmlResourceManagerSettings));
+
+                var settings = store.Items<XmlResourceManagerSettings>().FirstOrDefault();
+
+                if (settings != null)
+                    txtPath.Text = ((XmlResourceManagerSettings)settings).ResourceFolderPath;
+            }
+
+            var path = txtPath.Text; 
+
             if (string.IsNullOrEmpty(path))
             {
                 path = "/lang/";
@@ -123,6 +136,26 @@ namespace Nergard.EPi.Plugins.XmlResourceManager.Plugins
         {
             Thread.CurrentThread.CurrentUICulture = new CultureInfo(this.DdlSelectLanguage.SelectedValue);
             Inits();
+        }
+
+        protected void SavePath(object sender, EventArgs e)
+        {
+            var store = DynamicDataStoreFactory.Instance.GetStore(typeof(XmlResourceManagerSettings));
+
+            var settings = store.Items<XmlResourceManagerSettings>().FirstOrDefault();
+
+            if (settings != null)
+            {
+                store.DeleteAll();
+                settings.ResourceFolderPath = Request.Form[txtPath.UniqueID];
+                store.Save(settings);
+            }
+            else
+            {
+                settings = new XmlResourceManagerSettings();
+                settings.ResourceFolderPath = txtPath.Text;
+                store.Save(settings);
+            }
         }
 
         #endregion
@@ -281,7 +314,7 @@ namespace Nergard.EPi.Plugins.XmlResourceManager.Plugins
                     {
                         this._captionText = ((TextBox)item.FindControl("TxtPropCaption")).Text;
                         this._helpText = ((TextBox)item.FindControl("TxtPropHelp")).Text;
-                        this._propName = ((Label)item.FindControl("LblProp")).Text;
+                        this._propName = (((Label)item.FindControl("LblProp")).Text);
 
                         XmlNode propertyNode = doc.CreateElement(this._propName.ToLower());
 

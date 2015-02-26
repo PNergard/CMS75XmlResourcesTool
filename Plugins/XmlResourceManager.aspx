@@ -1,13 +1,47 @@
 <%@ Page Language="c#" EnableViewState="true" CodeBehind="XmlResourceManager.aspx.cs" AutoEventWireup="False" Inherits="Nergard.EPi.Plugins.XmlResourceManager.Plugins.XmlResourceManager" Title="XmlResourceManager" %>
 
-<%@ Register TagPrefix="EPiServerUI" Namespace="EPiServer.UI.WebControls" assembly="EPiServer.UI" %>
-<%@ Register TagPrefix="EPiServerScript" Namespace="EPiServer.ClientScript.WebControls" assembly="EPiServer" %>
+<%@ Register TagPrefix="EPiServerUI" Namespace="EPiServer.UI.WebControls" Assembly="EPiServer.UI" %>
+<%@ Register TagPrefix="EPiServerScript" Namespace="EPiServer.ClientScript.WebControls" Assembly="EPiServer" %>
 
 <asp:content contentplaceholderid="MainRegion" runat="server">
+
+    <script type="text/javascript">
+        $(function () {
+            CheckTranslations();
+
+            $("input").change(function (e) {
+                CheckTranslations();
+            });
+
+        });
+
+        function CheckTranslations() {
+            $("tr").each(function () {
+                if (!$(this).find(':first-child').is('th')) {
+                    var col1 = $(this).find('span:first');
+                    var col2 = $(this).find('input:first');
+
+                    var nameFromCode = col1.text();
+                    var translatedName = col2.val();
+
+                    if ((nameFromCode.toUpperCase() == translatedName.toUpperCase()) || !(/\S/.test(translatedName.toUpperCase()))) {
+                        $(this).css('background-color', '#A4EDE6');
+                    }
+                    else {
+                        $(this).css('background-color', '');
+                    }
+                }
+            });
+        }
+
+    </script>
+
     <div class="epi-formArea">
         <div class="epi-buttonDefault epi-size25">
             <asp:DropDownList ID="DdlSelectLanguage" runat="server" AutoPostback="false" EnableViewState="true" />
             <EPiServerUI:ToolButton id="ToolButton11" DisablePageLeaveCheck="true" OnClick="Refresh" runat="server" SkinID="File" text="<%$ Resources: EPiServer, xmlresourcemanager.buttonrefresh %>" ToolTip="<%$ Resources: EPiServer, xmlresourcemanager.buttonrefresh %>" />
+            <asp:TextBox EnableViewState="true" Columns="50" ID="txtPath" runat="server"></asp:TextBox>
+            <EPiServerUI:ToolButton id="ToolButton18" DisablePageLeaveCheck="true" OnClick="SavePath" runat="server" SkinID="File" text="<%$ Resources: EPiServer, xmlresourcemanager.buttonsavepath %>" ToolTip="<%$ Resources: EPiServer, xmlresourcemanager.buttonsavepath %>" />
         </div>
     </div>
 
@@ -32,12 +66,12 @@
                         <Columns>
                             <asp:TemplateField HeaderText="<%$ Resources: EPiServer, xmlresourcemanager.columnname %>" ItemStyle-Wrap="false">                
                                 <ItemTemplate>
-                                    <asp:Label Text="<%#PType.Name %> " ID="LblPTypeName" runat="server"/>
+                                    <asp:Label Text="<%#PType.Name %> " ID="LblPTypeName" runat="server" CssClass="firstcol"/>
                                 </ItemTemplate>
                             </asp:TemplateField>
                             <asp:TemplateField HeaderText="<%$ Resources: EPiServer, xmlresourcemanager.columndisplayname %>" ItemStyle-Wrap="false">                
                                 <ItemTemplate>
-                                    <asp:TextBox ID="TxtTypeDisplayName" Text='<%# PType.LocalizedName %>' CssClass="EP-requiredField" runat="server" />
+                                    <asp:TextBox ID="TxtTypeDisplayName" Text='<%# PType.LocalizedName %>'  runat="server" CssClass="secondcol"/>
                                 </ItemTemplate>
                             </asp:TemplateField>
                             <asp:TemplateField HeaderText="<%$ Resources: EPiServer, xmlresourcemanager.columndescription  %>" ItemStyle-Wrap="false">                

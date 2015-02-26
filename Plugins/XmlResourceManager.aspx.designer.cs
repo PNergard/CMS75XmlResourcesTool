@@ -31,6 +31,24 @@ namespace Nergard.EPi.Plugins.XmlResourceManager.Plugins {
         protected global::EPiServer.UI.WebControls.ToolButton ToolButton11;
         
         /// <summary>
+        /// txtPath control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtPath;
+        
+        /// <summary>
+        /// ToolButton18 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::EPiServer.UI.WebControls.ToolButton ToolButton18;
+        
+        /// <summary>
         /// actionTab control.
         /// </summary>
         /// <remarks>
